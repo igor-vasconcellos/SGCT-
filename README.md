@@ -32,5 +32,14 @@ Facilitar a visualização, edição e acompanhamento de chamados técnicos por 
 - [ ] Login e controle de acesso (planejado)
 
 ---
+## 🖼️ Preview do Design
+
+![Preview do Sistema](assets/design.png)
+![Preview do Sistema](assets/design.png)
+![Preview do Sistema](assets/design.png)
+
+
+
+
 
 
