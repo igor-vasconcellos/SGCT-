@@ -36,7 +36,7 @@ Facilitar a visualização, edição e acompanhamento de chamados técnicos por 
 
 ![Preview da tela de Chamados](./assets/abrirChamados.png)
 ![Preview da tela de Gerenciamento de Chamados](./assets/chamadosTech.png)
-![Preview do Sistema](assets/chamadosTechVerMais.png)
+![Preview do Sistema](./assets/chamadosTechVerMais.png)
 
 
 
