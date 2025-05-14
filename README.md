@@ -36,7 +36,7 @@ Facilitar a visualização, edição e acompanhamento de chamados técnicos por 
 
 <img src="./assets/abrirChamados.png" alt="Preview da tela de Chamados" width="600"/>
 <img src="./assets/chamadosTech.png" alt="Preview da tela de Chamados" width="600"/>
-<img src="./assets/chamadosTechVerMais.png" alt="Preview da tela de Chamados" width="600"/>
+
 
 
 
