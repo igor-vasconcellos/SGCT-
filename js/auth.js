@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       usuarios.push({ id: Date.now(), nome, email, senha, tipo });
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
       alert("Usuário cadastrado!");
-      window.location.href = "index.html";
+      window.location.href = "login.html";
     });
   }
 
