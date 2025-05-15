@@ -7,18 +7,22 @@
   <link rel="stylesheet" href="css/abrirChamado.css" />
 </head>
 <body>
+  
   <div class="container">
     <h1>Abrir chamado</h1>
+  
     <form id="cadastroForm">
+  
       <input type="text" id="titulo" placeholder="Título" required />
+  
       <textarea id="descricao" placeholder="Descrição" required></textarea>
       
       <select id="prioridade">
       
       <option value="">Prioridade:</option>
-      <option value="erro_sistema">Urgente</option>
-      <option value="manutencao_preventiva">Média</option>
-      <option value="manutencao_corretiva">Baixa</option>
+      <option value="alta">Alta</option>
+      <option value="media">Média</option>
+      <option value="baixa">Baixa</option>
       
       </select>
 
@@ -37,11 +41,11 @@
       
       </select>
       
-      <button type="submit">Enviar</button>
+      <button type="enviar">Enviar</button>
 
     </div>
       <button class="btn-voltar">Voltar</button>
     </div>
-    <script src="js/chamados.js"></script>
+
 </body>
 </html>
