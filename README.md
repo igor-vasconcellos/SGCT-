@@ -14,29 +14,38 @@ Facilitar a visualização, edição e acompanhamento de chamados técnicos por 
 
 ## 💻 Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript 
-- Node.js
-- MySQL
+- **HTML5 & CSS3** – Estrutura e estilo das páginas
+- **JavaScript** – Lógica do front-end e back-end
+- **Node.js** – Ambiente de execução do back-end
+- **Express** – Framework para servidor e rotas
+- **MySQL** – Banco de dados relacional
 
 ---
 
 ## 📋 Funcionalidades
 
 - [x] Listagem de chamados em tabela
-- [x] Botão "Ver mais" para exibir detalhes do chamado
-- [x] Visualização de informações: ID, Título, Descrição, Status, Prioridade, Data de Criação
-- [x] Edição inline de **Status** e **Prioridade** com ícone de lápis ✏️
-- [x] Login e controle de acesso (planejado)
-- [ ] Integração com backend para salvar alterações (em desenvolvimento)
+- [x] Visualização detalhada dos chamados ("Ver mais")
+- [x] Edição inline de **Status** e **Prioridade**
+- [x] Cadastro e login de usuários
+- [x] Controle de acesso por tipo de usuário
+- [ ] Integração completa do front-end com o back-end (em desenvolvimento)
+- [ ] Persistência total dos chamados no banco de dados (em desenvolviment
+
+---
+
+## 🚀 Como rodar o projeto
+
+1. **Clone o repositório:**  
+   ```bash
+   git clone https://github.com/igor-vasconcellos/SGCT-.git
 
 ---
 ## 🖼️ Preview do Design
 
-<img src="./assets/abrirChamados.png" alt="Preview da tela de Chamados" width="600"/>
+<img src="./assets/abrirChamados.png" alt="Preview da tela de Chamados" width="400"/>
 
-<img src="./assets/chamadosTech.png" alt="Preview da tela de Chamados" width="600"/>
+<img src="./assets/chamadosTech.png" alt="Preview da tela de Chamados" width="400"/>
 
 
 
