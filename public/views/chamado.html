@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abrir Chamado</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Abrir Chamado</h1>
+    <form id="formChamado">
+      <input type="text" id="titulo" placeholder="Título" required />
+      <textarea id="descricao" placeholder="Descrição" required></textarea>
+      <select id="prioridade">
+        <option value="Baixa">Baixa</option>
+        <option value="Média">Média</option>
+        <option value="Alta">Alta</option>
+      </select>
+      <select id="categoria"></select>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <a class="back-button" href="dashboard.html">Voltar</a>
+  <script src="/js/chamados.js"></script>
+</body>
+</html>
