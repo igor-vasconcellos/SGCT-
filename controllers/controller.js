@@ -29,7 +29,26 @@ function listarUsuarios(req, res) {
   });
 }
 
+function login(req, res) {
+  const { email, senha } = req.body;
+
+  usuarioModel.buscarPorEmailSenha(email, senha, (err, usuario) => {
+    if (err) return res.status(500).json({ erro: 'Erro no servidor' });
+    if (!usuario) return res.status(401).json({ erro: 'Credenciais inválidas' });
+
+    if (usuario.tipo === 'cliente') {
+      return res.json({ sucesso: true, redirecionar: '/home' });
+    } else if (usuario.tipo === 'adm' || usuario.tipo === 'tec') {
+      return res.json({ sucesso: true, redirecionar: '/home/funcionario' });
+    } else {
+      return res.status(400).json({ erro: 'Tipo de usuário inválido' });
+    }
+  });
+}
+
+
 module.exports = {
   criarUsuario,
-  listarUsuarios
+  listarUsuarios,
+  login
 };

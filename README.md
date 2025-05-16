@@ -29,7 +29,7 @@ Facilitar a visualização, edição e acompanhamento de chamados técnicos por 
 - [x] Visualização de informações: ID, Título, Descrição, Status, Prioridade, Data de Criação
 - [x] Edição inline de **Status** e **Prioridade** com ícone de lápis ✏️
 - [ ] Integração com backend para salvar alterações (em desenvolvimento)
-- [ ] Login e controle de acesso (planejado)
+- [x] Login e controle de acesso (planejado)
 
 ---
 ## 🖼️ Preview do Design

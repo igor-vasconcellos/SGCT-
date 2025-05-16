@@ -9,42 +9,46 @@ document.addEventListener("DOMContentLoaded", () => {
       const nome = document.getElementById("nome").value;
       const email = document.getElementById("email").value;
       const senha = document.getElementById("senha").value;
-      const tipo = document.getElementById("tipo").value;
 
-      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-      usuarios.push({ id: Date.now(), nome, email, senha, tipo });
-      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+      fetch('/cadastro', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ nome, email, senha})
+      });
+
       alert("Usuário cadastrado!");
-      window.location.href = "index.html";
+      window.location.href = "/";
     });
   }
 
   // Login de usuário
   if (loginForm) {
-    loginForm.addEventListener("submit", (e) => {
+    loginForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const email = document.getElementById("email").value;
       const senha = document.getElementById("senha").value;
-      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-      const usuario = usuarios.find(u => u.email === email && u.senha === senha);
 
-      if (usuario) {
-        localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
-        window.location.href = "dashboard.html";
+    try {
+      const response = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+      });
+
+      const result = await response.json();
+
+      if (result.sucesso) {
+        localStorage.setItem("usuarioLogado", "true");
+        window.location.href = result.redirecionar;
       } else {
-        alert("Credenciais inválidas!");
+        alert(result.erro || "Erro ao tentar logar");
       }
-    });
+    } catch (error) {
+      console.error("Erro:", error);
+      alert("Erro ao tentar logar");
+    }
+  });
   }
 });
-
-if (usuario) {
-  localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
-  if (usuario.tipo === "admin") {
-    window.location.href = "admin.html";
-  } else if (usuario.tipo === "tecnico") {
-    window.location.href = "tecnico.html";
-  } else {
-    window.location.href = "dashboard.html";
-  }
-}

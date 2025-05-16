@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abrir Chamado</title>
+  <link rel="stylesheet" href="css/abrirChamado.css" />
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Abrir chamado</h1>
+  
+    <form id="cadastroForm">
+  
+      <input type="text" id="titulo" placeholder="Título" required />
+  
+      <textarea id="descricao" placeholder="Descrição" required></textarea>
+      
+      <select id="prioridade">
+      
+      <option value="">Prioridade:</option>
+      <option value="alta">Alta</option>
+      <option value="media">Média</option>
+      <option value="baixa">Baixa</option>
+      
+      </select>
+
+      <select id="tipo">
+      
+      <option value="">Tipo de Atendimento:</option>
+      <option value="erro_sistema">Erro no Sistema</option>
+      <option value="manutencao_preventiva">Manutenção Preventiva</option>
+      <option value="manutencao_corretiva">Manutenção Corretiva</option>
+      <option value="instalacao_software">Instalação de Software</option>
+      <option value="atualizacao_sistema">Atualização de Sistema</option>
+      <option value="configuracao_rede">Configuração de Rede</option>
+      <option value="backup_recuperacao">Backup/Recuperação de Dados</option>
+      <option value="duvida_usuario">Dúvida do Usuário</option>
+      <option value="acesso_bloqueado">Acesso Bloqueado</option>
+      
+      </select>
+      
+      <button type="enviar">Enviar</button>
+
+    </div>
+      <button class="btn-voltar">Voltar</button>
+    </div>
+
+</body>
+</html>
