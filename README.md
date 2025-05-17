@@ -29,8 +29,8 @@ Facilitar a visualização, edição e acompanhamento de chamados técnicos por 
 - [x] Edição inline de **Status** e **Prioridade**
 - [x] Cadastro e login de usuários
 - [x] Controle de acesso por tipo de usuário
-- [ ] Integração completa do front-end com o back-end (em desenvolvimento)
-- [ ] Persistência total dos chamados no banco de dados (em desenvolviment
+- [x] Integração completa do front-end com o back-end 
+- [x] Persistência total dos chamados no banco de dados 
 
 ---
 
