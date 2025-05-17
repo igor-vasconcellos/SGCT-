@@ -3,30 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Técnico</title>
+  <title>Dashboard Cliente</title>
   <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
   <header>
-    <h1>Dashboard</h1>
+    <h1>Meus Chamados</h1>
   </header>
   
   <main>
     <section class="resumo">
-      <div class="card">Chamados Abertos: 0</div>
-      <div class="card">Chamados Resolvidos: 0</div>
-      <div class="card">Pendentes: 0</div>
-    
+      <div id="chamadosAbertos" class="card">Chamados Abertos: 0</div>
+      <div id="chamadosResolvidos" class="card">Chamados Resolvidos: 0</div>
+      <div id="chamadosPendentes" class="card">Pendentes: 0</div>
     </section>
     
     <div class="btn-container">
-    <button class="ver-chamados">Abrir um Novo Chamado</button>
+    <a href="/home/abrir-chamado"><button class="ver-chamados">Abrir um Novo Chamado</button></a>
     </div>
 
     </div>
-    <button class="btn-sair">Sair</button>
+    <a href="/logout"><button class="btn-sair">Sair</button></a>
     </div>
 
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('/api/resumo-chamados-cliente')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('chamadosAbertos').textContent = `Chamados Abertos: ${data.abertos}`;
+          document.getElementById('chamadosResolvidos').textContent = `Chamados Resolvidos: ${data.concluidos}`;
+          document.getElementById('chamadosPendentes').textContent = `Pendentes: ${data.andamento}`;
+        })
+        .catch(err => {
+          console.error('Erro ao carregar dados do dashboard:', err);
+        });
+    });
+  </script>
+
 </body>
 </html>
