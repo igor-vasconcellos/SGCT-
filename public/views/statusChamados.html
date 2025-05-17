@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Status dos Chamados</title>
-  <link rel="stylesheet" href="css/statusChamados.css" />
+  <link rel="stylesheet" href="/css/statusChamados.css" />
 </head>
 <body>
   <div class="container">
@@ -16,26 +16,7 @@
       <form class="card aberto">
        
         <div class="header">Em aberto</div>
-        <!-- Chamado 001 -->
-        <div class="chamado">
-          <div class="dot red" data-tooltip="Urgente"></div>
-          <span>(0001) Erro Sistema</span>
-          <!-- Chamada do card "Ver mais" com as informações -->
-            <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '14/05/2025')">Ver mais</a>
-        </div>
-        <!-- Chamado 002 -->
-        <div class="chamado">
-          <div class="dot yellow" data-tooltip="Média"></div>
-          <span>(0002) Man. Computador</span>
-          <!-- Chamada do card "Ver mais" com as informações -->
-          <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
-        </div>
-        <!-- Chamado 003 -->
-        <div class="chamado">
-          <div class="dot green" data-tooltip="Baixa"></div>
-          <span>(0003) ###. ########</span>
-          <!-- Chamada do card "Ver mais" com as informações -->
-          <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
+       
         </div>
         
         </form>
@@ -44,24 +25,8 @@
         <!-- Em Andamento -->
         <form class="card andamento">
             
-            <div class="header">Em andamento</div>
-            <div class="chamado">
-                <div class="dot red" data-tooltip="Urgente"></div>
-          <span>(0001) Erro Sistema</span>
-           <!-- Chamada do card "Ver mais" com as informações -->
-          <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
-        </div>
-        <div class="chamado">
-            <div class="dot yellow" data-tooltip="Média"></div>
-          <span>(0002) Man. Computador</span>
-           <!-- Chamada do card "Ver mais" com as informações -->
-          <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
-        </div>
-        <div class="chamado">
-            <div class="dot green" data-tooltip="Baixa"></div>
-          <span>(0003) ###. ########</span>
-           <!-- Chamada do card "Ver mais" com as informações -->
-          <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
+        <div class="header">Em andamento</div>
+            
         </div>
         
     </form>
@@ -70,52 +35,40 @@
       <form class="card concluidos">
     
         <div class="header">Concluídos</div>
-        <div class="chamado">
-          <div class="dot red" data-tooltip="Urgente"></div>
-          <span>(0001) Erro Sistema</span>
-          <!-- Chamada do card "Ver mais" com as informações -->
-          <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
-        </div>
-        <div class="chamado">
-            <div class="dot yellow" data-tooltip="Média"></div>
-            <span>(0002) Man. Computador</span>
-            <!-- Chamada do card "Ver mais" com as informações -->
-            <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
-        </div>
-        <div class="chamado">
-            <div class="dot green" data-tooltip="Baixa"></div>
-            <span>(0003) ###. ########</span>
-            <!-- Chamada do card "Ver mais" com as informações -->
-            <a href="#" onclick="abrirModal('0001', 'Erro no sistema.', 'Usuário relatou erro na tela de login.', 'Em aberto', 'Média', '00/00/0000')">Ver mais</a>
+        
         </div>
         
     </form>
     
-    <!-- Início do modal overlay (fundo escurecido que cobre toda a tela) -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-card" id="modalCard">
-            <h2 id="modalId" class="modal-id">ID: 0001</h2>
-                <p><strong>Título:</strong> <span id="modalTitulo">Erro no sistema.</span></p>
-                <p><strong>Descrição:</strong> <span id="modalDescricao">Usuário relatou erro na tela de login.</span></p>
-                <p><strong>Status:</strong> <span id="modalStatus">Em aberto</span> <a href="#" onclick="editarCampo('status')">Editar campo 🖊️</a></p>
-                <p><strong>Prioridade:</strong> <span id="modalPrioridade">Média</span> <a href="#" onclick="editarCampo('prioridade')">Editar campo 🖊️</a></p>
-                
-                <div class="modal-data">
-                    <p><strong>Data de criação:</strong> <span id="modalData">00/00/0000</span></p>
-                </div>
+    <!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-card" id="modalCard">
+    <h2 id="modalId" class="modal-id">ID: 0001</h2>
+    <p><strong>Título:</strong> <span id="modalTitulo"></span></p>
+    <p><strong>Descrição:</strong> <span id="modalDescricao"></span></p>
+    <p><strong>Status:</strong> <span id="modalStatus"></span> 
+      <a href="#" onclick="editarCampo('status')">Editar campo 🖊️</a>
+    </p>
+    <p><strong>Prioridade:</strong> <span id="modalPrioridade"></span> 
+      <a href="#" onclick="editarCampo('prioridade')">Editar campo 🖊️</a>
+    </p>
 
-                <div class="modal-buttons">
-                    <button class="save">Salvar</button>
-                    <button class="close" onclick="fecharModal()">Fechar</button>
-                </div>
-        </div>
+    <div class="modal-data">
+      <p><strong>Data de criação:</strong> <span id="modalData"></span></p>
     </div>
 
-</div>
-    <button class="btn-voltar">Voltar</button>
+    <div class="modal-buttons">
+      <button class="save">Salvar</button>
+      <button class="close" onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
 </div>
 
-  <script src="js/script.js"></script>
+</div>
+    <a href="/home/funcionario"><button class="btn-voltar">Voltar</button></a>
+</div>
+
+  <script src="/js/script.js"></script>
 
 </body>
 </html>
