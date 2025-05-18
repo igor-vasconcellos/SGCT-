@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Sistema de Chamados</title>
+  <link rel="stylesheet" href="/SGCT--main/public/css/login.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      
+      <!-- ⬇️ Novo agrupamento visual -->
+      <div class="form-bottom">
+        <button type="submit">Entrar</button>
+        <p>Não tem conta? <a href="/cadastro">Cadastre-se</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
