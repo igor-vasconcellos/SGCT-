@@ -23,9 +23,10 @@ h1 {
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start; /* ou center, se preferir centralizar */
   gap: 20px;
   flex-wrap: wrap;
+  align-items: flex-start; /* alinha os topos dos cards */
 }
 
 .card {

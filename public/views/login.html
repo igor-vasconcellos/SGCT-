@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Sistema de Chamados</title>
-  <link rel="stylesheet" href="/css/login.css" />
+  <link rel="stylesheet" href="/SGCT--main/public/css/login.css" />
 </head>
 <body>
   <div class="container">
@@ -12,9 +12,13 @@
     <form id="loginForm">
       <input type="email" id="email" placeholder="Email" required />
       <input type="password" id="senha" placeholder="Senha" required />
-      <button type="submit">Entrar</button>
+      
+      <!-- ⬇️ Novo agrupamento visual -->
+      <div class="form-bottom">
+        <button type="submit">Entrar</button>
+        <p>Não tem conta? <a href="/cadastro">Cadastre-se</a></p>
+      </div>
     </form>
-    <p>Não tem conta? <a href="/cadastro">Cadastre-se</a></p>
   </div>
   <script src="/js/auth.js"></script>
 </body>
