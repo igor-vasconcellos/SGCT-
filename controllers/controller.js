@@ -99,7 +99,7 @@ function enviarEmailNotificacao(destinatario, tituloChamado, novoStatus) {
     service: 'gmail',
     auth: {
       user: 'plataformapaeeja@gmail.com',
-      pass: 'ensg lbzs pfet fkcj'
+      pass: 'ycdx bnpx mfuu ydeg'
     }
   });
 
